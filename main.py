@@ -66,7 +66,7 @@ class PongGame(Widget):
 class PongApp(App):
     def build(self):
         game = PongGame()
-        Clock.schedule_once(game.serve_ball, 0.1)  # serve the ball after a short delay
+        game.serve_ball()
         Clock.schedule_interval(game.update, 1.0 / 60.0)
         return game
 
